@@ -21,4 +21,5 @@ import axios from "axios";
 
     export const deletar = async(url: string) => {
     await api.delete(url)
+    
     }
