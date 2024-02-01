@@ -1,26 +1,25 @@
-import React, { useContext } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
 
 function Navbar() {
-
     
-  return (
-    <>
-     <div className='w-full bg-red-600 text-white flex justify-center py-4'>
-          <div className="container flex justify-between text-lg">
-          <Link to='/home' className='text-2xl font-bold uppercase'>Farmácia</Link>
+    return (
+        <>
+        <div className='w-full bg-[#f03a3a] text-white flex justify-center py-4'>
+            <div className="container flex justify-between text-lg">
+                <div className='text-2xl font-bold uppercase'> 
+                <Link to='/'>Farmácia</Link>           
+                </div>
 
-            <div className='flex gap-4'>
-            <div className='hover:underline'>Produtos</div>
-            <Link to='/categorias' className='hover:underline'>Categoria</Link>
-            <Link to='/cadastroCategorias' className='hover:underline'>Cadastrar Categoria</Link>
-             
+
+                <div className='flex gap-4'>
+                    <Link to='/produtos' className='hover:underline'>Produtos</Link>
+                    <Link to='/categorias' className='hover:underline'>Categorias</Link>
+                    <Link to='/cadastrarCategoria' className='hover:underline'>Cadastrar categoria</Link>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-    </>
-  )
-}
+        </>
+    )
+    }
 
-export default Navbar
+    export default Navbar
